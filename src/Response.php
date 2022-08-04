@@ -96,10 +96,12 @@ class Response implements Responsable
 
         $props = $this->resolvePropertyInstances($props, $request);
 
+        $pattern = preg_replace("/^\//", "\\\\\/", $request->getBaseUrl());
+
         $page = [
             'component' => $this->component,
             'props' => $props,
-            'url' => url(preg_replace("/^\\{$request->getBaseUrl()}/", "", $request->getRequestUri())),
+            'url' => url(preg_replace("/^{$pattern}/", "", $request->getRequestUri())),
             'version' => $this->version,
         ];
 
