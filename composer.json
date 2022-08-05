@@ -1,5 +1,5 @@
 {
-    "name": "inertiajs/inertia-laravel",
+    "name": "andychen/inertia-laravel",
     "type": "library",
     "description": "The Laravel adapter for Inertia.js.",
     "keywords": ["laravel", "inertia"],
